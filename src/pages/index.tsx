@@ -39,10 +39,10 @@ Pages.getLayout = function getLayout(page: ReactElement): JSX.Element {
           images: [
             {
               alt: "Og Image Alt",
-              height: 600,
+              height: 360,
               type: "image/jpeg",
               url: "https://hatake.kk-web.link/og-image-01.jpg",
-              width: 800,
+              width: 640,
             },
           ],
           site_name: "はじめしゃちょーの畑 非公式ファンサイト",
@@ -51,7 +51,7 @@ Pages.getLayout = function getLayout(page: ReactElement): JSX.Element {
         }}
         title="はじめしゃちょーの畑 非公式ファンサイト"
         twitter={{
-          cardType: "summary",
+          cardType: "summary_large_image",
           site: "@hajimesyachohtk",
         }}
       />
