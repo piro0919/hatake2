@@ -1,0 +1,65 @@
+@import "styles/breakpoints";
+@import "sass-mq";
+
+.wrapper {
+  background-color: #cadff5;
+  background-repeat: repeat;
+  color: #fff;
+  padding: 12px;
+}
+
+.list {
+  display: grid;
+  gap: 12px;
+}
+
+.itemInner {
+  border-radius: 16px 16px 0 0;
+  overflow: hidden;
+  padding: 0 0 12px;
+}
+
+.iconWrapper {
+  background: #fff;
+  position: relative;
+}
+
+.iconWrapper::before {
+  content: "";
+  display: block;
+  padding: 100% 0 0;
+}
+
+.heading3 {
+  color: #fff;
+  letter-spacing: 1px;
+  padding: 8px 0 0;
+  text-align: center;
+  text-shadow: 2px 2px #004b00, 2px -2px #004b00, -2px 2px #004b00,
+    -2px -2px #004b00, 2px 0 #004b00, 0 2px #004b00, -2px 0 #004b00,
+    0 -2px #004b00, 3px 3px 2px rgb(0 0 0 / 50%);
+  @include mq($until: tablet) {
+    font-size: 1.4rem;
+  }
+  @include mq($from: tablet) {
+    font-size: 1.6rem;
+  }
+}
+
+.iconList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  padding: 8px 8px 0;
+}
+
+.icon {
+  border: 1px solid #fff;
+  height: 24px !important;
+  width: 24px !important;
+
+  :global(.social-svg) {
+    border-radius: 0 !important;
+  }
+}

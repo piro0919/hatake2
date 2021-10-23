@@ -1,0 +1,15 @@
+@import "styles/breakpoints";
+@import "sass-mq";
+
+.footer {
+  color: #fff;
+  padding: 60px 0;
+  text-align: center;
+  text-shadow: 2px 2px #004b00;
+  @include mq($until: tablet) {
+    font-size: 1.2rem;
+  }
+  @include mq($from: tablet) {
+    font-size: 1.6rem;
+  }
+}

@@ -1,0 +1,39 @@
+@import "styles/breakpoints";
+@import "sass-mq";
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.masonry {
+  display: flex;
+  max-width: 1280px;
+  width: 100%;
+  @include mq($until: tablet) {
+    margin-left: -12px;
+  }
+  @include mq($from: tablet) {
+    margin-left: -36px;
+  }
+}
+
+.masonryColumn {
+  @include mq($until: tablet) {
+    margin-bottom: -12px;
+    padding-left: 12px;
+  }
+  @include mq($from: tablet) {
+    margin-bottom: -36px;
+    padding-left: 36px;
+  }
+}
+
+.masonryColumn > * {
+  @include mq($until: tablet) {
+    margin-bottom: 12px;
+  }
+  @include mq($from: tablet) {
+    margin-bottom: 36px;
+  }
+}

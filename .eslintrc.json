@@ -1,3 +1,54 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "eslint:recommended",
+    "google",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:css-modules/recommended",
+    "next/core-web-vitals",
+    "prettier"
+  ],
+  "ignorePatterns": ["commitlint.config.js", "next.config.js"],
+  "overrides": [
+    {
+      "excludedFiles": ["_app.tsx", "_document.tsx"],
+      "files": "*",
+      "rules": {
+        "filenames/match-exported": ["error", [null, "camel"]],
+        "filenames/match-regex": "error"
+      }
+    }
+  ],
+  "plugins": [
+    "css-modules",
+    "filenames",
+    "sort-destructure-keys",
+    "sort-keys-shorthand"
+  ],
+  "root": true,
+  "rules": {
+    "@typescript-eslint/explicit-function-return-type": "error",
+    "import/order": [
+      "error",
+      {
+        "alphabetize": {
+          "caseInsensitive": true,
+          "order": "asc"
+        }
+      }
+    ],
+    "newline-before-return": "error",
+    "no-console": "error",
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 1
+      }
+    ],
+    "react/jsx-sort-props": "error",
+    "require-jsdoc": "off",
+    "semi": "error",
+    "sort-destructure-keys/sort-destructure-keys": "error",
+    "sort-keys": "off",
+    "sort-keys-shorthand/sort-keys-shorthand": "error"
+  }
 }

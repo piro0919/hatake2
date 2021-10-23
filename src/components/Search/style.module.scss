@@ -1,0 +1,29 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.formInner {
+  display: grid;
+  grid-template: auto / auto auto;
+}
+
+.input {
+  background: #fff;
+  border: 1px solid #0c8c1d;
+  height: 32px;
+  max-width: 320px;
+  padding: 0 8px;
+  width: 100%;
+}
+
+.button {
+  background: #0c8c1d;
+  color: #fff;
+  height: 32px;
+  letter-spacing: 1px;
+  padding: 0 16px;
+  text-shadow: 2px 2px #375f2f, 2px -2px #375f2f, -2px 2px #375f2f,
+    -2px -2px #375f2f, 2px 0 #375f2f, 0 2px #375f2f, -2px 0 #375f2f,
+    0 -2px #375f2f;
+}

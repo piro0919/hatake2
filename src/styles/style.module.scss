@@ -1,0 +1,11 @@
+@use "sass:map";
+@import "./breakpoints";
+
+:export {
+  breakpoints: {
+    desktop: map.get($map: $mq-breakpoints, $key: desktop);
+    mobile: map.get($map: $mq-breakpoints, $key: mobile);
+    tablet: map.get($map: $mq-breakpoints, $key: tablet);
+    wide: map.get($map: $mq-breakpoints, $key: wide);
+  }
+}

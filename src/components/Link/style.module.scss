@@ -1,0 +1,20 @@
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: calc(140px * 3 + 12px * 2);
+}
+
+.anchor {
+  background: #0c8c1d;
+  color: #fff;
+  letter-spacing: 1px;
+  padding: 4px 0;
+  text-align: center;
+  text-shadow: 2px 2px #375f2f, 2px -2px #375f2f, -2px 2px #375f2f,
+    -2px -2px #375f2f, 2px 0 #375f2f, 0 2px #375f2f, -2px 0 #375f2f,
+    0 -2px #375f2f;
+  width: 140px;
+}

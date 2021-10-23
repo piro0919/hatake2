@@ -1,0 +1,231 @@
+@import "styles/breakpoints";
+@import "sass-mq";
+
+.wrapper {
+  @include mq($until: tablet) {
+    padding: 12px;
+  }
+  @include mq($from: tablet) {
+    padding: 24px;
+  }
+}
+
+.wrapper::before {
+  background: linear-gradient(
+      127deg,
+      rgb(153 255 88 / 46%) 0%,
+      rgb(153 255 88 / 46%) 14.286%,
+      rgb(134 245 84 / 46%) 14.286%,
+      rgb(134 245 84 / 46%) 28.572%,
+      rgb(114 236 80 / 46%) 28.572%,
+      rgb(114 236 80 / 46%) 42.858%,
+      rgb(95 226 76 / 46%) 42.858%,
+      rgb(95 226 76 / 46%) 57.144%,
+      rgb(76 216 72 / 46%) 57.144%,
+      rgb(76 216 72 / 46%) 71.43%,
+      rgb(56 207 68 / 46%) 71.43%,
+      rgb(56 207 68 / 46%) 85.716%,
+      rgb(37 197 64 / 46%) 85.716%,
+      rgb(37 197 64 / 46%) 100.002%
+    ),
+    linear-gradient(
+      285deg,
+      rgb(116 183 117) 0%,
+      rgb(116 183 117) 14.286%,
+      rgb(113 173 114) 14.286%,
+      rgb(113 173 114) 28.572%,
+      rgb(110 163 110) 28.572%,
+      rgb(110 163 110) 42.858%,
+      rgb(107 154 107) 42.858%,
+      rgb(107 154 107) 57.144%,
+      rgb(104 144 103) 57.144%,
+      rgb(104 144 103) 71.43%,
+      rgb(101 134 100) 71.43%,
+      rgb(101 134 100) 85.716%,
+      rgb(98 124 96) 85.716%,
+      rgb(98 124 96) 100.002%
+    );
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  @include mq($until: tablet) {
+    clip-path: inset(12px round 12px);
+  }
+  @include mq($from: tablet) {
+    clip-path: inset(24px round 24px);
+  }
+}
+
+.topWrapper {
+  bottom: 0;
+  height: 50vh;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  @include mq($until: tablet) {
+    clip-path: inset(12px 12px 0 round 12px 12px 0 0);
+  }
+  @include mq($from: tablet) {
+    clip-path: inset(24px 24px 0 round 24px 24px 0 0);
+  }
+}
+
+.top {
+  border-bottom: 16px solid #fff;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.daytime {
+  background: #95c0ec;
+}
+
+.evening {
+  background: #f27502;
+}
+
+.night {
+  background: #254370;
+}
+
+.cloud {
+  background: #fff;
+  border-radius: 200px;
+  height: 60px;
+  position: relative;
+  width: 200px;
+}
+
+.cloud::before,
+.cloud::after {
+  background: #fff;
+  border-radius: 100px;
+  content: "";
+  position: absolute;
+}
+
+.cloud::before {
+  height: 80px;
+  left: 10px;
+  top: -15px;
+  width: 100px;
+}
+
+.cloud::after {
+  height: 120px;
+  right: 15px;
+  top: -55px;
+  width: 120px;
+}
+
+.inner {
+  display: grid;
+  grid-template: auto 1fr auto / 1fr;
+  position: relative;
+  z-index: 1;
+}
+
+.inner::before,
+.inner::after {
+  background: #906a37;
+  content: "";
+  left: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  @include mq($until: tablet) {
+    height: 12px;
+  }
+  @include mq($from: tablet) {
+    height: 24px;
+  }
+}
+
+.inner::before {
+  top: 0;
+}
+
+.inner::after {
+  bottom: 0;
+}
+
+.main {
+  @include mq($until: tablet) {
+    padding: 0 12px;
+  }
+  @include mq($from: tablet) {
+    padding: 0 36px;
+  }
+}
+
+.footerWrapper {
+  padding: 36px 0 0;
+}
+
+.bottomWrapper {
+  bottom: 0;
+  height: 20vh;
+  left: 0;
+  position: fixed;
+  @include mq($until: tablet) {
+    clip-path: inset(round 0 0 12px 12px);
+    margin: 12px;
+    width: calc(100% - 12px * 2);
+  }
+  @include mq($from: tablet) {
+    clip-path: inset(round 0 0 24px 24px);
+    margin: 24px;
+    width: calc(100% - 24px * 2);
+  }
+}
+
+.bottom {
+  background: linear-gradient(transparent, #906a37);
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-origin: center bottom;
+}
+
+.youtTubeWrapper {
+  border-color: transparent #f20000 transparent transparent;
+  border-style: solid;
+  height: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 0;
+  z-index: 1;
+  @include mq($until: tablet) {
+    border-width: 0 120px 120px 0;
+  }
+  @include mq($from: tablet) {
+    border-width: 0 160px 160px 0;
+  }
+}
+
+.youtTubeIconWrapper {
+  position: fixed;
+  right: 0;
+  top: 0;
+  @include mq($until: tablet) {
+    height: 36px;
+    margin: 12px;
+    width: 48px;
+  }
+  @include mq($from: tablet) {
+    height: 48px;
+    margin: 16px;
+    width: 64px;
+  }
+}

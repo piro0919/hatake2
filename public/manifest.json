@@ -1,0 +1,16 @@
+{
+  "background_color": "#0c8c1d",
+  "display": "standalone",
+  "icons": [
+    {
+      "sizes": "512x512",
+      "src": "/icon-512x512.png",
+      "type": "image/png"
+    }
+  ],
+  "name": "はじめしゃちょーの畑 非公式ファンサイト",
+  "orientation": "portrait",
+  "short_name": "畑 非公式ファンサイト",
+  "start_url": "/",
+  "theme_color": "#0c8c1d"
+}
