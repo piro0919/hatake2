@@ -38,11 +38,11 @@ Pages.getLayout = function getLayout(page: ReactElement): JSX.Element {
             "はじめしゃちょーの畑の非公式ファンサイトです。よろしく土！",
           images: [
             {
-              alt: "Og Image Alt",
-              height: 360,
-              type: "image/jpeg",
-              url: "https://hatake.kk-web.link/og-image-01.jpg",
-              width: 640,
+              alt: "はじめしゃちょーの畑 非公式ファンサイト",
+              height: 600,
+              type: "image/png",
+              url: "https://hatake.kk-web.link/og-image-01.png",
+              width: 800,
             },
           ],
           site_name: "はじめしゃちょーの畑 非公式ファンサイト",

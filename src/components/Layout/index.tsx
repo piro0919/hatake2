@@ -53,57 +53,56 @@ function Layout({ children }: LayoutProps): JSX.Element {
 
     return styles.night;
   }, []);
+  const items = useMemo(
+    () =>
+      [
+        {
+          duration: 25,
+          initialX: (width / 7) * 4,
+          y: "5vh",
+        },
+        {
+          duration: 30,
+          initialX: width / 8,
+          y: "12.5vh",
+        },
+        {
+          duration: 22.5,
+          initialX: width / 3,
+          y: "20vh",
+        },
+        {
+          duration: 35,
+          initialX: (width / 4) * 3,
+          y: "22.5vh",
+        },
+      ].map(({ duration, initialX, y }) => (
+        <motion.div
+          animate={{ x: [initialX, width, -200, initialX] }}
+          className={styles.cloud}
+          key={y}
+          style={{ y }}
+          transition={{
+            duration,
+            ease: "linear",
+            repeat: Infinity,
+            times: [
+              0,
+              (width - initialX) / (width + 200),
+              (width - initialX) / (width + 200),
+              1,
+            ],
+          }}
+        />
+      )),
+    [width]
+  );
 
   return (
     <div className={styles.wrapper}>
       <div className={styles.topWrapper}>
         <motion.div className={`${styles.top} ${zone}`} style={topStyle}>
-          <motion.div
-            // TODO: ロジックあまめ
-            animate={{ x: [(width / 7) * 4, width, -200, (width / 7) * 4] }}
-            className={styles.cloud}
-            style={{ y: "5vh" }}
-            transition={{
-              duration: 25,
-              ease: "linear",
-              repeat: Infinity,
-              // TODO: ロジックあまめ
-              times: [0, 3 / 7, 3 / 7, 1],
-            }}
-          />
-          <motion.div
-            animate={{ x: [width / 8, width, -200, width / 8] }}
-            className={styles.cloud}
-            style={{ y: "12.5vh" }}
-            transition={{
-              duration: 30,
-              ease: "linear",
-              repeat: Infinity,
-              times: [0, 7 / 8, 7 / 8, 1],
-            }}
-          />
-          <motion.div
-            animate={{ x: [width / 3, width, -200, width / 3] }}
-            className={styles.cloud}
-            style={{ y: "20vh" }}
-            transition={{
-              duration: 22.5,
-              ease: "linear",
-              repeat: Infinity,
-              times: [0, 2 / 3, 2 / 3, 1],
-            }}
-          />
-          <motion.div
-            animate={{ x: [(width / 4) * 3, width, -200, (width / 4) * 3] }}
-            className={styles.cloud}
-            style={{ y: "22.5vh" }}
-            transition={{
-              duration: 35,
-              ease: "linear",
-              repeat: Infinity,
-              times: [0, 1 / 4, 1 / 4, 1],
-            }}
-          />
+          {items}
         </motion.div>
       </div>
       <div className={styles.inner} style={innerStyle}>
